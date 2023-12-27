@@ -38,11 +38,11 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun ProfileScreen() {
-    var selectedTabindex by remember {
+    var selectedTabIndex by remember {
         mutableStateOf(0)
     }
     Column(modifier = Modifier.fillMaxSize()) {
-        TopBar(name = "sohaibkhan_official", modifier = Modifier.padding(10.dp))
+        TopBar(name = "sohaibkhan.dev", modifier = Modifier.padding(10.dp))
         Spacer(modifier = Modifier.height(4.dp))
         ProfileSection()
         Spacer(modifier = Modifier.height(25.dp))
@@ -93,9 +93,9 @@ fun ProfileScreen() {
                 ),
             )
         ) {
-            selectedTabindex = it
+            selectedTabIndex = it
         }
-        when (selectedTabindex) {
+        when (selectedTabIndex) {
             0 -> PostSection(
                 posts = listOf(
                     painterResource(id = R.drawable.kmm),
@@ -158,7 +158,7 @@ fun ProfileSection(
                 .padding(20.dp)
         ) {
             RoundImage(
-                image = painterResource(id = R.drawable.philipp), modifier = Modifier
+                image = painterResource(id = R.drawable.sohaib), modifier = Modifier
                     .size(100.dp)
                     .weight(3f)
             )
@@ -166,13 +166,13 @@ fun ProfileSection(
             StatSection(modifier = Modifier.weight(7f))
         }
         ProfileDescription(
-            displayName = "Programming Mentor",
-            description = "10 years of coding experience \n" +
+            displayName = "Sohaib khan",
+            description = "5 years of development experience \n" +
                     "Want me to make your app? Send me an email! \n" +
-                    "Subscribe to my youtube channel!",
-            url = "https://youtube.com/PhillippLackner",
-            followedBy = listOf("coding in flow", "miakhalifa"),
-            otherCount = 17
+                    "sohaibkhan2468@gmail.com",
+            url = "https://github.com/sohaibkhaa",
+            followedBy = listOf("coding in flow"),
+            otherCount = 100
         )
 
     }

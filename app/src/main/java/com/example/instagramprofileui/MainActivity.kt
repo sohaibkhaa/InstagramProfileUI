@@ -19,4 +19,11 @@ class MainActivity : ComponentActivity() {
             ProfileScreen()
         }
     }
+
+    @Preview(showBackground = true)
+    @Composable
+    fun Preview() {
+        ProfileScreen()
+    }
+
 }
